@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+<body>
+
+    
+
+
+    <h1>폼(form) 요소 작성하기</h1>
+    <!-- form은 서버에 전송할 양식이다
+    action="서버에 전송할 경로"
+    현재는 서버가 없기 때문에 action을 테스트할 수는 없다
+    양식 작성법만 학습할 예정 -->
+
+    <form action="login.jsp">
+        <label for="email">이메일</label>
+        <input type="text" id="email" name="email">
+        <label for="pwd">비밀번호</label> <!--비밀번호는 동그라미로 가려져서 보임-->
+        <input type="password" id="pwd" name="pwd">
+        <!-- 제출 버튼은 반드시 form 요소 안에 위치해야 한다 
+            그래야 작동한다-->
+        <button type="submit">로그인</button>
+    </form>
+        <button type="submit">폼 밖의 로그인</button>
+
+    <form action="login.jsp">
+        <label for="phoneNumber">전화번호</label>
+        <input type="text" id="phoneNumber" name="phone">
+        <button type="submit">제출하기</button>
+    </form>
+    <!-- 
+    ** 웹서버에서는 name 속성의 값으로 어디에 뭘 입력하는지 구분한다
+    name으로 이거 어떤 데이터인지 구분할 수 있음
+    id는 label for의 값과 일치시켜야 한다, 
+    두 값이 일치되어야지 스크린리더기가 읽어줄 수 있기 때문  -->
+
+    <!-- 
+    label의 for 속성 값과
+    input의 id 속성 값은 동일하게 작성되어야 한다
+    name 속성 값은 서버에서 필요한 값이다 
+    e.g 'email=fdfasdfadsf&pwd=dddd' 이렇게 전송됨
+    -->
+
+    <button onclick="f1()">인사하기</button>
+
+    <script>
+
+        let f1=function(){
+            alert("안녕하세요")
+        };
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 폭을 강제하지 않으면 블록 요소는 폭을 100% 먹는다 
+        따라서 div는 폭을 정해줘야 한다
+        특정 div를 가운데정렬하려면, width를 결정하고 좌우마진을 오토를 설정하면 좌우 마진이 같게 된다
+        그럼 가운데 정렬됨
+        클래스를 설정하고 선택자를 이용해서 디자인을 적용하는 패턴*/
+        .container{
+            width: 578px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .spacer{
+            height: 500px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>동일한 페이지 내에서의 이동(책갈피)</h1>
+        <!-- 책갈피 : 같은 페이지 안에서의 이동이며, 주소창에도 각 요소가 표시된다 -->
+        <ul>
+            <li><a href="#one">one</a></li>
+            <li><a href="#two">two</a></li>
+            <li><a href="#three">three</a></li>
+        </ul>
+        <div class="spacer"></div>
+        <p id="one">one Lorem ipsum dolor sit amet consectetur adipisicing elit.Doloribus sequi vel placeat eum. Cum cumque quia odio nostrum accusantium, enim ducimus aliquid sapiente, autem, hic voluptatem consequuntur deleniti quidem saepe?</p>
+         <div class="spacer"></div>
+        <p id="two">two Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis fuga obcaecati. Doloremque quia optio nemo maxime, tenetur reiciendis quis dignissimos nam praesentium quae quibusdam impedit omnis vitae ducimus excepturi!</p>
+        <div class="spacer"></div>
+        <p id="three">three Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur eius unde ut eveniet velit, id voluptate, minus ipsum cumque facilis atque accusantium impedit placeat fugiat distinctio nulla cupiditate soluta.</p>
+        <div class="spacer"></div>
+        <!-- Lorem + tab : 랜덤한 자동완성 텍스트 생성 -->
+    </div>
+
+
+    <!-- 
+    emmet기능, 더 편리한 마크업 코딩을 도와주는 단축키, https://docs.emmet.io/cheat-sheet/ 에서 확인 가능    
+    div.contaner + tab 하면 자동으로 클래스 속성이 부여됨
+    div.contaner#one + tab 하면 클래스와 id 속성이 부여됨 
+    div*5
+    div{div$}*5
+    ul>li
+        중괄호 안에 쓰면 innertext 적힘
+    -->
+
+  
+
+    <div class="title"></div>
+    <form action="" id="search" class="wide"></form>
+    <!-- .찍으면 클래스, #찍으면 아이디 포함 전부 다를 가지게 해줌 -->
+
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+    <p>1</p>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+
+    <div id="ih"></div>
+    <div class="hi"></div>
+
+
+        
+</body>
+</html>
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step08_table.html</title>
+    <style>
+        #myTable{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>표(table) 형식으로 정보를 출력하기 (약식)</h1>
+    <table> <!--3개의 row과 각 row는 3개의 column으로 이뤄짐--> 
+        <tr> <!--0번째 로우-->
+            <th>번호</th> <!--0번째 칼럼-->
+            <th>이름</th> <!--1번째 칼럼-->
+            <th>주소</th> <!--2번째 칼럼-->
+        </tr>
+        <tr> <!--1번째 로우-->
+            <td>1</td>
+            <td>김구라</td>
+            <td>노량진</td>
+        </tr>
+        <tr> <!--2번째 로우-->
+            <td>2</td>
+            <td>해골</td>
+            <td>행신동</td>
+        </tr>
+    </table>
+
+    <table border="4">
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>김구라</td>
+            <td>노량진</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>해골</td>
+            <td>행신동</td>
+        </tr>
+    </table>
+
+    <table border="1" id="myTable">
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>김구라</td>
+            <td>노량진</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>해골</td>
+            <td>행신동</td>
+        </tr>
+    </table>
+</body>
+</html>

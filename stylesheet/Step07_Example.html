@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step07_Example.html</title>
+	<style>
+		.wrapper{
+			/* 자식 div 를 원하는 위치에 마음대로 배치하기 위해 */
+			position: relative;
+			width: 500px;
+			height: 500px;
+			margin: 0 auto;
+			border: 1px solid red
+		}
+		/* 
+		relative라는 속성을 주게 되면 html 요소의 기본 위치를 기준으로 위치를 
+		설정하는 방식은 static이랑 같지만 top, bottom 등의 속성을 부여할 수 있다.
+		이게 일반적으로 생각하는 그 위치 설정이 맞다
+		
+		부모는 relative / 자식은 absolute로 설정하고
+		top, left를 이용해서 위치시킬 수 있다 
+		앱솔루트(alsolute)가 오히려 상위(부모) 요소를 기준으로 
+		절대적인 위치에 배치하는 것*/
+		.box{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			background-color: yellow;
+		}
+		#one{
+			top: 100px;
+			left: 100px;
+		}
+		#two{
+			top: 100px;
+			right: 100px;
+		}
+		#three{
+			bottom: 100px;
+			left: 100px;
+		}
+		#four{
+			bottom: 100px;
+			right: 100px;
+		}
+		#center{
+			top: 225px;
+			left: 225px;
+		}
+		/* .wrapper div 전체 덮기 */
+		#test{
+			background-color: #000;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			color: #fff;
+			opacity: 0.5; /* 투명도 ( 0 ~ 1.0) */
+		}
+	</style>
+</head>
+<body>
+<h3>특정 요소 안에서 원하는 위치에 배치</h3>
+<div class="wrapper">
+	<div class="box" id="one">one</div>
+	<div class="box" id="two">two</div>
+	<div class="box" id="three">three</div>
+	<div class="box" id="four">four</div>
+	<div class="box" id="center">center</div>
+	<div id="test">test</div>
+</div>	
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image-panel{
+            border-width: 2px;
+            border-style: solid;
+            border-color: red;
+            border-radius: 10px;
+            padding-left: 10px;
+            
+        }
+        /*
+        margin : border와 웹 페이지 가장 끝부터 사이의 간격
+        border : 모서리, 가장자리, 경계선이라는 뜻
+        padding : border와 내부 컨텐츠 사이 간격
+        */
+
+        /* 선택자에서 띄어 쓰기를 하면 자손 요소를 의미한다. 
+        자손 = 자식 + 자식의 자식 + 자식의 자식의 자식 ...까지 전부 포함 */
+        .image-panel img{/* 클래스 속성의 값이 image-panel인 요소의 자손 중에서 img 선택*/
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body> <!-- 부모요소 : body / 자식 요소 : div / 포함 관계를 부모요소, 자식요소로 설명한다 -->
+    <div> 요소는 문단을 나타낼 때 사용합니다. </div>
+    <div> 문단에 해당하는 것은 문자열 뿐만이 아니고 여러가지 요소도 될 수 있습니다. </div>
+    <div> div 요소는 폭을 100% 차지하는 block 요소입니다. </div>
+    <br>
+    <div class="image-panel">
+        <img src="images/kim1.png" alt="">
+        <img src="images/rabbit_1.png" alt="">
+    <!-- 들여쓰기(tab)는 포함 관계가 한눈에 파악하게 해준다. -->
+    </div>
+    <br>
+    <div class="image-panel">
+        <img src="images/image1.png">
+        <img src="images/image2.png">
+    </div>
+    <img src="images/1.jpg" alt=""> <!-- 아무 스타일의 영향을 안 받음, 클래스 속성이 없기 때문에-->
+</body>
+</html>

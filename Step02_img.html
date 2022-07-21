@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_img.html</title>
+    <!-- # : 특정요소를 유일하게 선택해서 사용하는 선택자-->
+    <!-- 요소명은 달라도 상관 없고, 같은 요소를 가진 애들을 찾기 위함임-->
+    <style>
+        #one{ /* id="one"인 요소에 적용할 css*/
+            color:red;
+        }
+        #two{
+            color: blue;
+        }
+        #three{
+            color:green;
+        }
+        /*class = "my-class"인 요소에 적용할 css
+        class 속성으로 선택할 땐 선택자 .을 사용함*/
+        .my-class{
+            font-style:italic;
+        }
+        .han-img{
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <h1>이미지입니다.</h1>
+    <!-- 화면 폭 전체를 차지하기 때문에, 다음에 넣은 이미지는 그 밑에 출력 -->
+
+    <img src="images/02_the_last_airbender.jpg" alt="영화 포스터">
+    <img src="images/0.png" alt="">
+    <img src="" alt="">
+    <!-- 컴퓨터에 저장된 뿐만 아니라, 인터넷에 있는 이미지도 가져올 수 있다 -->
+    <br><!-- 강제 개행, 한 줄 띄어쓰기-->
+    <!--
+        img 요소의 src 속성의 값으로는 로딩할 이미지가 위치한 경로를 적어놓으면 
+        웹브라우저가 해당경로를 찾아서 이미지 데이터를 받아와서 화면상에 표시해 준다.
+        alt 속성의 값으로는 이미지의 자세한 설명을 적으면 된다.
+
+        img 요소는 '인라인' 요소이기 때문에 개행을 따로 해주지 않으면 한줄에 표기된다.
+        인라인 요소 : 필요한 만큼만 차지 / 블록 요소 : 폭 전체를 차지
+    -->
+    <img src="http://pics.gmarket.co.kr/pc/single/kr/common/image__logo.png" 
+        alt="Gmartket 로고">
+    <!-- h들은 display block  
+        inline element:좌에서 우로 쌓이는 것
+        block element:위에서 아래로 쌓이는 것-->
+
+    <!-- id 속성은 특정 요소를 유일하게 식별하고자 할 때 사용하는 속성이다.
+        -->
+
+    <p id = "one"> 단락을 나타내는 p 요소 </p>
+    <!-- class 속성은 특정 요소들을 같은 그룹으로 구성하고자 할 때 사용하는 속성-->
+    <div id = "two" class="my-class">문단을 나타내는 div 요소</div>
+    <h2 id="three" class="my-class"> 제목을 나타내는 h2 </h2>
+
+    <!--
+        img 요소의 src 속성의 값으로는 로딩할 이미지가 위치한 경로를 적어놓으면 
+        웹브라우저가 해당경로를 찾아서 이미지 데이터를 받아와서 화면상에 표시해 준다.
+        alt 속성의 값으로는 이미지의 자세한 설명을 적으면 된다.
+
+        img 요소는 인라인 요소이기 때문에 개행을 따로 해주지 않으면 한줄에 표기된다.
+    -->
+
+    <h1>이미지 요소의 크기 조절하기</h1>
+    <!-- 1번과 3번 이미지의 폭과 높이를 200px, 200px로 변경하기 -->
+    <img src="images/1.jpg" class="han-img">
+    <img src="images/3.jpg" class="han-img">
+    <img src="images/2.jpg">
+    
+
+
+</body>
+</html>

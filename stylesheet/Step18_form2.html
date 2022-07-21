@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>회원 가입 폼</h1>
+            <form action="signup.jsp">
+                <div>
+                    <label class="form-label" for="email">이메일</label>
+                    <input class="form-control" type="text" id="email" name="email">
+                    <!-- 클래스에 is-valid 추가하기만 하면 초록색 효과와 체크표시가 생김 
+                        is-invalid 는 빨간색 효과와 느낌표 표시
+                    콘솔 창에서도 email=document.querySelector("#email")
+                    email.classList.add("is-valid") 같이 수정할 수 있다 -->
+                    <div class="invalid-feedback">이메일 형식에 맞게 입력하세요</div>
+                    <!--  is-valid / is-invalid 클래스를 입력하면 자동으로 함께 출력된다. -->
+                </div>
+                <div>
+                    <label class="form-label is-valid" for="pwd">비밀번호</label>
+                    <input class="form-control" type="password" id="pwd" name="pwd">
+                    <div class="valid-feedback">사용할 수 있는 비밀번호입니다.</div>
+                </div>
+                <button class="btn btn-primary" type="submit">가입</button>
+            </form>
+            <script>
+                // 페이지 로딩 시점에 실행
+                document.querySelector("#email").addEventListener("input", function(){
+                    // 이메일 요소에 인풋 이벤트가 발생할 때 실행
+                    let a=document.querySelector("#email") // 이거 대신에
+                    // let inputEmail=this.value 이걸로 쓸 수 있다. this 로
+
+                    // 검사-엘리먼츠 보면서 코드 변화를 확인하거나, 콘솔에서 실험하면서 결과 확인하면 좋다
+                    let index=a.value.indexOf("@")
+                    if(index==-1){
+                            this.classList.remove("is-valid")
+                            this.classList.add("is-invalid")
+                    }else{
+                            this.classList.remove("is-invalid")
+                            this.classList.add("is-valid")
+                    };
+
+                });
+                // 인풋이라는 이벤트가 일어날 때마다 호출할 함수
+                    /*
+                        1. 입력한 이메일 읽어와서
+                        2. 이메일 형식을 맞는지 확인하고
+                        3. 맞으면 is-valid / 틀리면 is-invalid 클래스 추가
+                    */
+
+                    // @ 문자열이 몇번째 인덱스에 있는지 확인
+                    // -1이 뜨면 @가 입력값 안에 없는 것이므로, 형식이 맞지 않는다는 뜻
+            </script>
+
+        </div>
+
+    </div>
+</body>
+</html>

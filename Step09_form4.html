@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>폼 요소에 기본값 설정하기</h1>
+    <p>
+        서버에서 클라이언트에게 폼을 응답할때 이미 저장된 값을
+        출력한 채로 응답을 해야할 때가 있다
+        예을 들어 회원 가입된 정보 보기로 이동한다면
+        DB에 이미 저장된 내용을 출력해주어야 한다.
+    </p>
+    <form action="update.jsp">
+        이메일 <input type="email" name="email" value="aaa@naver.com">
+        <br>
+        <!-- 미리 value 값이 채워져서 출력됨 -->
+
+        <fieldset>
+            <legend>취미 정보 선택</legend> 
+            <!-- 전체의 레이블 역할 -->
+            <label>
+                <input type="checkbox" name="hobby" value="soccer"> 축구
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="baking" checked> 베이킹
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="piano"> 피아노
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="etc" checked> 기타
+            </label>
+            <!-- 체크박스는 한번에 여러 개를 전달할 수 있음
+            hobby=soccer&hobby=baking -->
+        </fieldset>
+
+        <label for="job">직업선택</label>
+        <select name="job" id="job">
+            <option value="">선택</option>
+            <option value="programmer">프로그래머</option>
+            <option value="doctor">의사</option>
+            <option value="pianist" selected>피아니스트</option>
+            <option value="etc">기타</option>
+        </select>
+        <!-- checked, selected 등으로 미리 정해진 값을 처음에 출력시킴 -->
+
+        <br>
+        <label for="comment">하고 싶은 말</label>
+        <br>
+        <textarea name="comment" id="comment">textarea는 처음 문구를 
+    여기다가 넣으세요</textarea>     
+            <!-- 탭이랑 개행기호까지 다 반영시켜서 띄워준다 -->
+
+        <button type="submit">수정하기</button>
+        <button type="reset">취소</button>
+        <!-- 취소 누르면 처음에 미리 출력되어 있던 값으로 돌아감 -->
+    </form>
+</body>
+</html>

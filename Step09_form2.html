@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #comment{
+            width: 10%;
+            height: 50px;
+        }
+
+        #hoho{
+            width: 70%;
+        }
+        /* 클래스만 .이고 나머지 속성은 다 #이용해서 css 운영 */
+    </style>
+</head>
+<body>
+    <h1>회원 가입 폼입니다.</h1>
+    <form action="signup.jsp">
+        <label for="email">이메일</label>
+        <input type="text" id="email" name="email"><br>
+        
+
+        <fieldset>
+            <legend>성별 정보 선택</legend>
+            <label>
+                <input type="radio" name="gender" value="man" checked> 남자
+                <!-- checked 처럼 속성 명 단독으로 존재하는 속성도 있다 
+                레이블 안에 인풋요소가 들어있어서 글자를 선택해도 된다 -->
+                
+                <!-- 네임 속성의 밸류가 같아서 하나의 그룹으로 묶여 있다, 
+                하나를 체크하면 하나가 풀림 -->
+            </label>
+            <label>
+                <input type="radio" name="gender" value="woman"> 여자
+            </label> 
+            <!-- 서버에는 밸류에 지정된 값이 전송됨 
+            이런 식으로 email=aaa%40daadf.com&gender=man
+            라디오는 하나의 값만 전달할 수 있다
+            form 에서는 name 속성값(name=입력된 값)을, fieldset 에서는 value 속성값(name=value)을 서버에 보낸다.-->
+
+        </fieldset>
+        <!-- 
+            fieldset , legend 요소가 왜 필요한지와
+            label 텍스트를 제공하는 새로운 방법을 익히세요
+            input type="radio" 에서 name 속성의 값이 같으면 
+            같은 그룹으로 묶인다.
+        -->
+
+        <!-- 필드셋 : 박스로 묶어주고 / 레전드 : 박스 사이에 낀 레이블 느낌 / 체크박스 : 복수 중복 선택 가능 -->
+        <fieldset id="hoho">
+            <legend>취미 정보 선택</legend> 
+            <!-- 전체의 레이블 역할 -->
+            <label>
+                <input type="checkbox" name="hobby" value="soccer"> 축구
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="baking"> 베이킹
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="piano"> 피아노
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="etc"> 기타
+            </label>
+            <!-- 체크박스는 한번에 여러 개를 전달할 수 있음
+            hobby=soccer&hobby=baking -->
+        </fieldset>
+
+        <label for="job">직업선택</label>
+        <select name="job" id="job">
+            <option value="">선택</option>
+            <option value="programmer">프로그래머</option>
+            <option value="doctor">의사</option>
+            <option value="pianist">피아니스트</option>
+            <option value="etc">기타</option>
+        </select>
+        <!-- 서버에 전송되는 값은 name에 지정한 job=의사 이렇게 나옴 -->
+        <!-- option에 value가 없으면 innerText(e.g. 선택)가 전송된다. 
+        아래도 value값을 따로 지정하지 않았기 때문에 
+        '라면, 자장면' 등의 텍스트가 그대로 전송되는 것-->
+
+        <br>
+        <label for="lunch">점심 선택</label>
+        <select name="lunch" id="lunch">
+            <optgroup label="분식">
+                <option>라면</option>
+                <option>쫄면</option>
+                <option>김밥</option>
+            </optgroup>
+            <optgroup label="중식">
+                <option>자장면</option>
+                <option>짬뽕</option>
+                <option>군만두</option>
+            </optgroup>
+        </select>
+        <br>
+        
+        <label for="myFile">첨부파일</label>
+        <input type="file" id="myFile" name="myFile">
+        <br>
+        <!-- 긴 문장, 개행기호 입력 가능 -->
+        <label for="comment">하고 싶은 말</label>
+        <br>
+        <textarea name="abc" id="comment"></textarea>     
+        <!-- css는 id를 보고 반응함 -->
+        <!-- 서버는 name, value, 없으면 innertext 을 보고 반응함 -->
+        <br>
+        <button type="submit">가입</button>
+    </form>
+</body>
+</html>
